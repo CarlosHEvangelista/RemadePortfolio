@@ -12,14 +12,18 @@
 
 html {
     --sectionSpacing: 1.8rem;
+    --listStyleNone: none;  
+    --sectionBackground: #302F3D; 
 }
 
 body {
     background-color: #22212C;
+    padding-top: 2.5rem;
 }
 
 section {
-    background-color: #302F3D;
+    border-radius: 1.25rem;
+    margin-bottom: var(--sectionSpacing);
 }
 
 img {
@@ -31,14 +35,17 @@ img {
 }
 
 #Profile {
-    margin-bottom: 1000px;
+    background-color: var(--sectionBackground);
     padding: calc(var(--sectionSpacing) + 0.2rem) 0 calc(var(--sectionSpacing) + 1.2rem);
     text-align: center;
+
 }
 
 #Profile img {
     position: relative;
     z-index: 10;
+
+    margin-bottom: var(--sectionSpacing);
 }
 
 #Profile::after {
@@ -48,9 +55,217 @@ img {
     height: 8.5rem;
     left: 7rem;
     position: absolute;
-    top: 1.7rem;
+    top: 4.2rem;
     width: 8.5rem;
     z-index: 0;
-    
 }
+
+
+#Profile h1 {
+    margin-bottom: 0.625rem;
+}
+
+#Profile p {
+    font-weight: lighter;
+}
+
+
+#ProfessionalLinks {
+    background-color: var(--sectionBackground);
+    padding:
+     calc(var(--sectionSpacing) + 0.3rem) calc(var(--sectionSpacing) + 0.7rem) var(--sectionSpacing);
+}
+
+#ProfessionalLinks ul {
+    list-style: var(--listStyleNone);
+}
+
+#ProfessionalLinks li {
+    margin-bottom: 1.75rem;
+}
+
+#ProfessionalLinks a {
+    align-items: center;
+    display: flex;
+    gap: 1.25rem;
+}
+
+#ProfessionalLinks i {
+    font-size: 1.5rem;
+}
+
+#ProfessionalLinks span {
+    font-size: 0.875rem;
+}
+
+#Technologies {
+    background-color: var(--sectionBackground);
+    padding: var(--sectionSpacing) calc(var(--sectionSpacing) - 0.6rem);   
+}
+
+#Technologies ul {
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: 5.3rem 5.3rem 5.3rem;
+    list-style: var(--listStyleNone);
+    margin-top: 1.25rem;
+    padding-left: 0.625rem;
+
+
+}
+
+#Technologies li {
+    background-color: #CB92B1;
+    border-radius: 1.25rem;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    text-align: center;    
+}
+
+#Education {
+    background-color: var(--sectionBackground);
+    padding: var(--sectionSpacing) calc(var(--sectionSpacing) - 0.6rem);
+}
+
+#Education ul {
+    font-size: 0.75rem;
+    padding-left: 2.5rem;
+    margin-top: 1.25rem;
+}
+
+#Education strong {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+#Education span {
+    font-weight: lighter;
+}
+
+
+#MyProjects #Title {
+    background-color: var(--sectionBackground);
+    border-radius: 1.25rem 1.25rem 0 0;
+    margin-bottom:  calc(var(--sectionSpacing) * 4) ;
+    padding: var(--sectionSpacing);
+    position: relative;
+    text-align: center;
+}
+
+#Title i{
+    background-color: #22212C;
+    border-radius: 50%;
+    bottom: -1rem;
+    font-size: 2rem;
+    left: 10rem;
+    padding: 0.2rem;
+    position: absolute;
+}
+
+#Title a {
+    bottom: -3.125rem;
+    left: 8.5rem;
+    position: absolute;
+}
+
+#Title::after {
+    background-color: #42414d;
+    border-radius: 0 0 1.25rem 1.25rem;
+    bottom: -3.75rem;
+    content: "";
+    height: 3.75rem;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+#Projects {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sectionSpacing);
+}
+
+#Projects a > div {
+    background-color: var(--sectionBackground);
+    border-radius: 1.25rem;
+    padding: var(--sectionSpacing);
+}
+
+#Projects h3 {
+    display: flex;
+    margin-bottom: 1.375rem;
+}
+
+#Projects i {
+    font-size: 1.5rem;
+}
+
+#Projects i.icon-folder {
+    margin-right: 1rem;
+}
+
+#Projects span  {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#Projects span::after {
+    background-color: #E34C26;
+    border: 2px solid #837E9F;
+    border-radius: 50%;
+    content: "";
+    height: 0.9rem;
+    position: absolute;
+    right: 95px;
+    width: 0.9rem;
+
+
+}
+
+#Projects .Project1 div, #Projects .Project2 div {
+    display: grid;
+    grid-template-columns: 5.625rem 10rem 3.125rem;
+    margin-top: 3rem;
+}
+
+#RecentPosts #Title {
+    background-color: var(--sectionBackground);
+    border-radius: 1.25rem;
+    margin-bottom: var(--sectionSpacing);
+    padding: var(--sectionSpacing);
+}
+
+
+#RecentPosts #Post {
+    background-color: var(--sectionBackground);
+    border-radius: 1.25rem;
+    padding: var(--sectionSpacing);
+    text-align: center;
+}
+
+#RecentPosts #Post img {
+    margin-bottom: 1.25rem;
+}
+
+#RecentPosts #Post h3 {
+    margin-bottom: 0.25rem;
+}
+
+#RecentPosts #Post p {
+    margin-top: 1.75rem;
+}
+
+
+#RecentPosts #Post p span {
+    line-height: 24px;
+}
+
+
+
+
+
 
