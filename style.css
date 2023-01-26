@@ -13,7 +13,8 @@
 html {
     --sectionSpacing: 1.8rem;
     --listStyleNone: none;  
-    --sectionBackground: #302F3D; 
+    --sectionBackground: #302F3D;
+    --sectionDesktopWidth: 21rem; 
 }
 
 body {
@@ -145,7 +146,7 @@ img {
 }
 
 
-#MyProjects #Title {
+#MyProjects #ProjectsTitle {
     background-color: var(--sectionBackground);
     border-radius: 1.25rem 1.25rem 0 0;
     margin-bottom:  calc(var(--sectionSpacing) * 4) ;
@@ -154,7 +155,7 @@ img {
     text-align: center;
 }
 
-#Title i{
+#ProjectsTitle i{
     background-color: #22212C;
     border-radius: 50%;
     bottom: -1rem;
@@ -164,22 +165,35 @@ img {
     position: absolute;
 }
 
-#Title a {
-    bottom: -3.125rem;
+#ProjectsTitle a {
+    bottom: -2.125rem;
     left: 8.5rem;
     position: absolute;
+    visibility: hidden;
+    transition: 0.1s;
 }
 
-#Title::after {
+#ProjectsTitle::after {
     background-color: #42414d;
     border-radius: 0 0 1.25rem 1.25rem;
-    bottom: -3.75rem;
+    bottom: -1.25rem;
     content: "";
     height: 3.75rem;
     left: 0;
     position: absolute;
     width: 100%;
     z-index: -1;
+
+    transition: bottom 0.2s;
+}
+
+#ProjectsTitle.ShowLink::after {
+    bottom: -3.75rem;
+}
+
+#ProjectsTitle.ShowLink a {
+    bottom: -3.125rem;
+    visibility: visible;
 }
 
 #Projects {
@@ -213,6 +227,15 @@ img {
     gap: 0.5rem;
 }
 
+
+#Projects .Project1 div, #Projects .Project2 div {
+    display: grid;
+    grid-template-columns: 5.625rem 10rem 3.125rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+
 #Projects span::after {
     background-color: #E34C26;
     border: 2px solid #837E9F;
@@ -220,19 +243,13 @@ img {
     content: "";
     height: 0.9rem;
     position: absolute;
-    right: 95px;
+    right: 60px;
     width: 0.9rem;
 
 
 }
 
-#Projects .Project1 div, #Projects .Project2 div {
-    display: grid;
-    grid-template-columns: 5.625rem 10rem 3.125rem;
-    margin-top: 3rem;
-}
-
-#RecentPosts #Title {
+#RecentPosts #PostsTitle {
     background-color: var(--sectionBackground);
     border-radius: 1.25rem;
     margin-bottom: var(--sectionSpacing);
@@ -255,16 +272,89 @@ img {
     margin-bottom: 0.25rem;
 }
 
+#RecentPosts #Post span {
+    display: inline-block;
+    margin-bottom: 1.75rem;
+}
+
 #RecentPosts #Post p {
-    margin-top: 1.75rem;
+    margin-bottom: 0.625rem;
 }
 
 
-#RecentPosts #Post p span {
-    line-height: 24px;
+@media(min-width: 900px) {
+
+    body {
+        padding: 2.5rem 2.5rem;
+    }
+
+    main {
+        position: relative;
+    }
+
+    #Profile,#ProfessionalLinks,#Technologies,#Education {
+        width: var(--sectionDesktopWidth);
+    }
+
+    #MyProjects, #RecentPosts, #Post {
+        width: calc(var(--sectionDesktopWidth) + 32rem);
+    }
+
+    #MyProjects {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    #MyProjects #ProjectsTitle {
+        align-items: center;
+        border-radius: 1.25rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #MyProjects #ProjectsTitle i{
+        display: none;
+    }
+
+    #MyProjects #ProjectsTitle::after {
+        display: none;
+    }
+
+    #MyProjects #ProjectsTitle a {
+        position: static;
+        visibility: visible;
+
+    }
+
+    #Projects {
+        flex-direction: row;
+    }
+
+    
+    #MyProjects #Projects .Project1 {
+        width: fit-content;
+    }
+
+    #MyProjects #Projects .Project1 span::after {
+        right: 75px;
+    }
+
+    #MyProjects #Projects .Project2 span::after {
+        right: 65px;
+
+    }
+
+    #MyProjects #Projects .Project2 div {
+        grid-template-columns: 5.625rem 15rem 3.125rem ; 
+    }
+
+    #MyProjects #Projects .Project2 { 
+        width: 28rem;
+    }
+
+
 }
-
-
 
 
 

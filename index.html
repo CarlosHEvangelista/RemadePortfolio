@@ -23,30 +23,38 @@
       <section id="ProfessionalLinks">
         <ul>
           <li>
-            <a href=""><i class="icon-map-pin"></i><span>Brasil</span></a>
+            <a target="_blank" id="LocationInfo" href=""
+              ><i class="icon-map-pin"></i><span>Brasil</span></a
+            >
           </li>
           <li>
-            <a href=""><i class="icon-briefcase"></i><span>Rocketseat</span></a>
+            <a target="_blank" id="CompanyInfo" href=""
+              ><i class="icon-briefcase"></i><span>Rocketseat</span></a
+            >
           </li>
           <li>
-            <a href=""><i class="icon-github"></i><span>birobirobiro</span></a>
+            <a target="_blank" id="GithubInfo" href=""
+              ><i class="icon-github"></i><span>birobirobiro</span></a
+            >
           </li>
           <li>
-            <a href=""
+            <a target="_blank" id="LinkedinInfo" href=""
               ><i class="icon-linkedin"></i><span>joão-ínacio-neto</span></a
             >
           </li>
           <li>
-            <a href=""><i class="icon-twitter"></i><span>BiroBiroBiro</span></a>
+            <a target="_blank" id="TwitterInfo" href=""
+              ><i class="icon-twitter"></i><span>BiroBiroBiro</span></a
+            >
           </li>
           <li>
-            <a href=""
+            <a target="_blank" id="WebsiteInfo" href=""
               ><i class="icon-globe"></i
               ><span>https://birobirobiro.dev</span></a
             >
           </li>
           <li>
-            <a href=""
+            <a target="_blank" id="EmailInfo" href=""
               ><i class="icon-mail"></i
               ><span>birobirobiro.dev@gmail.com</span></a
             >
@@ -92,14 +100,14 @@
       </section>
 
       <section id="MyProjects">
-        <div id="Title">
+        <div id="ProjectsTitle">
           <h2>My Projects</h2>
-          <i class="icon-equals"></i>
-          <a href="">Veja Todos</a>
+          <i id="IconForToggleSystem" class="icon-equals"></i>
+          <a target="_blank" id="RepositoriesLink" href="">Veja Todos</a>
         </div>
 
         <div id="Projects">
-          <a href="">
+          <a target="_blank" class="RepositorieLink" href="">
             <div class="Project1">
               <h3><i class="icon-folder"></i> Pokeroms</h3>
               <p>Baixe todos os Jogos da franquia Pokemon</p>
@@ -110,9 +118,9 @@
               </div>
             </div>
           </a>
-          <a href="">
+          <a target="_blank" class="RepositorieLink" href="">
             <div class="Project2">
-              <h3><i class="icon-folder"></i> Fatality Games</h3>
+              <h3><i class="icon-folder"></i>FatalityGames-main</h3>
               <p>
                 Projeto inspirado na loja de games e acessórios em Cascavel
                 Parána
@@ -128,29 +136,25 @@
       </section>
 
       <section id="RecentPosts">
-        <div id="Title">
+        <div id="PostsTitle">
           <h2>Recent Posts</h2>
         </div>
-        <a href="">
-          <div id="Post">
-            <img
-              src="http://lorempixel.com.br/185/185/?1"
-              alt="Avatar de usuario do Github"
-            />
-            <h3>
-              Erro adb devices no Genymotion e Android Studio (React Native)
-            </h3>
-            <span>2 anos atrás</span>
+        <div id="Post">
+          <img
+            src="http://lorempixel.com.br/185/185/?1"
+            alt="Avatar de usuario do Github"
+          />
+          <h3>
+            Erro adb devices no Genymotion e Android Studio (React Native)
+          </h3>
+          <span>2 anos atrás</span>
 
-            <p>
-              Erro adb devices no Genymotion e Android Studio (React Native)
-              <br />
-              <span>#react-native</span> <span>#genimotion</span>
-              <span>#genimotion</span> <span>#genimotion</span>
-            </p>
-          </div>
-        </a>
+          <p>Erro adb devices no Genymotion e Android Studio (React Native)</p>
+          <p>#react-native #genimotion #genimotion #genimotion</p>
+        </div>
       </section>
     </main>
   </body>
+  <script src="IconToggleSystem.js"></script>
+  <script src="GetInfosFromGithubAPI.js"></script>
 </html>
