@@ -14,7 +14,8 @@ html {
     --sectionSpacing: 1.8rem;
     --listStyleNone: none;  
     --sectionBackground: #302F3D;
-    --sectionDesktopWidth: 21rem; 
+    --sectionDesktopWidth: 21rem;
+    --sectionShadow: 2px 2px 2.5px 1px rgba(0, 0, 0, 0.096); 
 }
 
 body {
@@ -205,7 +206,7 @@ img {
 #Projects a > div {
     background-color: var(--sectionBackground);
     border-radius: 1.25rem;
-    padding: var(--sectionSpacing);
+    padding: var(--sectionSpacing) 1.25rem 1.4rem var(--sectionSpacing) ;
 }
 
 #Projects h3 {
@@ -230,7 +231,7 @@ img {
 
 #Projects .Project1 div, #Projects .Project2 div {
     display: grid;
-    grid-template-columns: 5.625rem 10rem 3.125rem;
+    grid-template-columns: 5.625rem 11rem 3.125rem;
     margin-top: 3rem;
     position: relative;
 }
@@ -272,7 +273,7 @@ img {
     margin-bottom: 0.25rem;
 }
 
-#RecentPosts #Post span {
+#RecentPosts #Post > span {
     display: inline-block;
     margin-bottom: 1.75rem;
 }
@@ -281,6 +282,10 @@ img {
     margin-bottom: 0.625rem;
 }
 
+#RecentPosts #Post p span {
+    line-height: 2rem;
+    margin-right: 1.5rem;
+}
 
 @media(min-width: 900px) {
 
@@ -293,7 +298,13 @@ img {
     }
 
     #Profile,#ProfessionalLinks,#Technologies,#Education {
+        box-shadow: var(--sectionShadow);
         width: var(--sectionDesktopWidth);
+    }
+
+    #Profile::after {
+        top: 1.725rem;
+        left: 6.225rem;
     }
 
     #MyProjects, #RecentPosts, #Post {
@@ -309,8 +320,10 @@ img {
     #MyProjects #ProjectsTitle {
         align-items: center;
         border-radius: 1.25rem;
+        box-shadow: var(--sectionShadow);
         display: flex;
         justify-content: space-between;
+        margin-bottom: 1.4rem;
     }
 
     #MyProjects #ProjectsTitle i{
@@ -318,7 +331,7 @@ img {
     }
 
     #MyProjects #ProjectsTitle::after {
-        display: none;
+          display: none;
     }
 
     #MyProjects #ProjectsTitle a {
@@ -333,7 +346,47 @@ img {
 
     
     #MyProjects #Projects .Project1 {
+        box-shadow: var(--sectionShadow);
         width: fit-content;
+    }
+
+    #MyProjects #Projects .Project1:hover {
+        animation: Test 1s infinite linear;
+    }
+
+    #MyProjects #Projects .Project1:active {
+        animation: Test1 1s;
+
+    }
+
+    
+
+    @keyframes Test {
+        25% {
+            transform: translateY(5px);
+        }
+
+        50% {
+            transform: translateY(-5px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    
+    #MyProjects #Projects .Project2 {
+        box-shadow: var(--sectionShadow);
+        width: 28rem;
+    }
+
+    #MyProjects #Projects .Project2:hover {
+        animation: Test 1s infinite linear;
+    }
+
+    #MyProjects #Projects .Project2:active {
+        animation: Test1 1s;
     }
 
     #MyProjects #Projects .Project1 span::after {
@@ -341,17 +394,78 @@ img {
     }
 
     #MyProjects #Projects .Project2 span::after {
-        right: 65px;
+        right: 70px;
 
+    }
+
+    #MyProjects #Projects .Project1 div {
+        grid-template-columns: 5.625rem 11rem 3.125rem ; 
     }
 
     #MyProjects #Projects .Project2 div {
-        grid-template-columns: 5.625rem 15rem 3.125rem ; 
+        grid-template-columns: 5.625rem 16rem 3.125rem ; 
     }
 
-    #MyProjects #Projects .Project2 { 
-        width: 28rem;
+    #RecentPosts {
+        position: absolute;
+        right: 0;
+        top: 21rem;
     }
+
+    #RecentPosts #PostsTitle {
+        box-shadow: var(--sectionShadow);
+    }
+
+    #RecentPosts #Post {
+        box-shadow: var(--sectionShadow);
+        display: grid;
+        grid-template-columns: 8rem 40rem;
+        column-gap: 1.25rem;
+        grid-template-areas: "img h3"
+                             "img span"
+                             "img p";
+ 
+        text-align: left;
+
+
+                             
+    }
+
+    #RecentPosts #Post:hover {
+        animation: Test 1s infinite linear;
+    }
+
+    #RecentPosts #Post:active {
+        animation: Test1 1s ;
+    }
+
+    @keyframes Test1 {
+        50% {
+            transform: scale(95%);
+        }
+
+        100% {
+            transform: scale(100%);
+        }
+    }
+
+
+    #RecentPosts #Post img {
+        grid-area: img;
+    }
+
+    #RecentPosts #Post h3 {
+        grid-area: h3;
+    }
+    
+    #RecentPosts #Post > span {
+        grid-area: span;
+    }
+
+    #RecentPosts #Post p {
+        grid-area: p;
+    }
+
 
 
 }
