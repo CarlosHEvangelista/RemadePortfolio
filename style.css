@@ -302,9 +302,29 @@ img {
         width: var(--sectionDesktopWidth);
     }
 
+    #Profile:hover img {
+        animation: Clipping 1s forwards;
+    }
+
     #Profile::after {
-        top: 1.725rem;
-        left: 6.225rem;
+        top: 27px;
+        left: 100px;
+    }
+
+    #Profile:hover::after {
+        animation: Clipping 1s forwards;
+    }
+
+    @keyframes Clipping {
+
+        0% {
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 0 );
+        }
+
+        100% {
+            clip-path: polygon(50% 0, 95% 27%, 95% 73%, 50% 100%, 5% 73%, 5% 27%);
+
+        }
     }
 
     #MyProjects, #RecentPosts, #Post {
@@ -351,28 +371,12 @@ img {
     }
 
     #MyProjects #Projects .Project1:hover {
-        animation: Test 1s infinite linear;
+        animation: ToFloat 1s infinite linear;
     }
 
     #MyProjects #Projects .Project1:active {
-        animation: Test1 1s;
+        animation: ToPress 1s forwards;
 
-    }
-
-    
-
-    @keyframes Test {
-        25% {
-            transform: translateY(5px);
-        }
-
-        50% {
-            transform: translateY(-5px);
-        }
-
-        100% {
-            transform: translateY(0);
-        }
     }
 
     
@@ -382,11 +386,11 @@ img {
     }
 
     #MyProjects #Projects .Project2:hover {
-        animation: Test 1s infinite linear;
+        animation: ToFloat 1s infinite linear;
     }
 
     #MyProjects #Projects .Project2:active {
-        animation: Test1 1s;
+        animation: ToPress 1s forwards;
     }
 
     #MyProjects #Projects .Project1 span::after {
@@ -432,24 +436,14 @@ img {
     }
 
     #RecentPosts #Post:hover {
-        animation: Test 1s infinite linear;
+        animation: ToFloat 1s infinite linear ;
     }
 
     #RecentPosts #Post:active {
-        animation: Test1 1s ;
+        animation: ToPress 1s forwards;
     }
 
-    @keyframes Test1 {
-        50% {
-            transform: scale(95%);
-        }
-
-        100% {
-            transform: scale(100%);
-        }
-    }
-
-
+    
     #RecentPosts #Post img {
         grid-area: img;
     }
@@ -467,6 +461,29 @@ img {
     }
 
 
+    @keyframes ToFloat {
+    25% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+    }
+
+    @keyframes ToPress {
+        50% {
+            transform: scale(95%);
+        }
+
+        100% {
+            transform: scale(95%);
+        }
+    }
 
 }
 
