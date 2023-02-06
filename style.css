@@ -11,439 +11,382 @@
 }
 
 html {
-    --sectionSpacing: 1.8rem;
-    --listStyleNone: none;  
     --sectionBackground: #302F3D;
+    --sectionBorder: 1.25rem;
+    --sectionPadding: 2rem;
+
     --sectionDesktopWidth: 21rem;
-    --sectionShadow: 2px 2px 2.5px 1px rgba(0, 0, 0, 0.096); 
+    --sectionBoxShadow: 2px 4px 2px 0 rgba(0, 0, 0, 0.194);
 }
 
 body {
     background-color: #22212C;
-    padding-top: 2.5rem;
 }
 
 section {
-    border-radius: 1.25rem;
-    margin-bottom: var(--sectionSpacing);
+    margin-top: 2rem;
+}
+
+h2 {
+    font-size: 1.25rem;
 }
 
 img {
-    border-radius: 100%;
+    border-radius: 50%;
     height: 8rem;
-    object-fit: cover;
     width: 8rem;
-
 }
 
 #Profile {
     background-color: var(--sectionBackground);
-    padding: calc(var(--sectionSpacing) + 0.2rem) 0 calc(var(--sectionSpacing) + 1.2rem);
+    border-radius: var(--sectionBorder);
+    box-shadow: var(--sectionBoxShadow);
+    padding: var(--sectionPadding) 0 calc(var(--sectionPadding) + 1rem);
     text-align: center;
-
 }
 
 #Profile img {
+    margin-bottom: 1.8rem;
     position: relative;
-    z-index: 10;
-
-    margin-bottom: var(--sectionSpacing);
+    z-index: 1;
 }
 
 #Profile::after {
-    background: linear-gradient(#0500ff 0%, #1efff2 100%);
-    border-radius: 100%;
+    background: linear-gradient(#0A32FD 0%, #1DF7F2 100%);
+    border-radius: 50%;
     content: "";
     height: 8.5rem;
     left: 7rem;
     position: absolute;
-    top: 4.2rem;
+    top: 3.725rem;
     width: 8.5rem;
     z-index: 0;
 }
 
-
 #Profile h1 {
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.6rem;
 }
-
-#Profile p {
-    font-weight: lighter;
-}
-
 
 #ProfessionalLinks {
     background-color: var(--sectionBackground);
-    padding:
-     calc(var(--sectionSpacing) + 0.3rem) calc(var(--sectionSpacing) + 0.7rem) var(--sectionSpacing);
+    border-radius: var(--sectionBorder);
+    box-shadow: var(--sectionBoxShadow);
+    padding: var(--sectionPadding) calc(var(--sectionPadding) - 0.8rem);
 }
 
 #ProfessionalLinks ul {
-    list-style: var(--listStyleNone);
+    list-style: none;
+    margin-top: 1.25rem;
+    padding-left: 1.3rem;
 }
 
-#ProfessionalLinks li {
-    margin-bottom: 1.75rem;
+#ProfessionalLinks ul li {
+    margin-top: 1.25rem;
 }
 
-#ProfessionalLinks a {
+#ProfessionalLinks ul li a {
     align-items: center;
     display: flex;
-    gap: 1.25rem;
+    font-size: 0.8rem;
+    gap: 0.5rem;
 }
 
-#ProfessionalLinks i {
+#ProfessionalLinks ul li a i {
     font-size: 1.5rem;
-}
-
-#ProfessionalLinks span {
-    font-size: 0.875rem;
 }
 
 #Technologies {
     background-color: var(--sectionBackground);
-    padding: var(--sectionSpacing) calc(var(--sectionSpacing) - 0.6rem);   
+    border-radius: var(--sectionBorder);
+    box-shadow: var(--sectionBoxShadow);
+    padding: var(--sectionPadding) calc(var(--sectionPadding) - 0.8rem);
 }
 
-#Technologies ul {
+#Technologies  ul {
     display: grid;
     gap: 0.9rem;
-    grid-template-columns: 5.3rem 5.3rem 5.3rem;
-    list-style: var(--listStyleNone);
+    grid-template-columns: 5rem 5rem 5rem;
+    list-style: none;
     margin-top: 1.25rem;
-    padding-left: 0.625rem;
-
-
+    padding-left: 0.6rem;
 }
 
-#Technologies li {
+#Technologies ul li {
     background-color: #CB92B1;
-    border-radius: 1.25rem;
+    border-radius: var(--sectionBorder);
     color: black;
     font-size: 0.8rem;
     font-weight: bold;
     padding: 0.5rem;
-    text-align: center;    
+    text-align: center;
 }
 
 #Education {
     background-color: var(--sectionBackground);
-    padding: var(--sectionSpacing) calc(var(--sectionSpacing) - 0.6rem);
+    border-radius: var(--sectionBorder);
+    box-shadow: var(--sectionBoxShadow);
+    padding: var(--sectionPadding) calc(var(--sectionPadding) - 0.8rem);
 }
 
 #Education ul {
-    font-size: 0.75rem;
-    padding-left: 2.5rem;
     margin-top: 1.25rem;
+    padding-left: 1.3rem;
 }
 
-#Education strong {
+#Education ul li {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+}
+
+#Education ul li strong {
     font-size: 1rem;
-    font-weight: bolder;
 }
 
-#Education span {
+#Education ul li span {
     font-weight: lighter;
+    font-size: 0.75rem;
 }
-
 
 #MyProjects #ProjectsTitle {
     background-color: var(--sectionBackground);
-    border-radius: 1.25rem 1.25rem 0 0;
-    margin-bottom:  calc(var(--sectionSpacing) * 4) ;
-    padding: var(--sectionSpacing);
+    border-radius: var(--sectionBorder) var(--sectionBorder) 0 0;
+    box-shadow: var(--sectionBoxShadow);
+    margin-bottom: 4rem;
+    padding: var(--sectionPadding);
     position: relative;
     text-align: center;
 }
 
-#ProjectsTitle i{
-    background-color: #22212C;
-    border-radius: 50%;
+#MyProjects #ProjectsTitle::after {
+    background-color: #4b485c;
+    border-radius: var(--sectionBorder);
     bottom: -1rem;
-    font-size: 2rem;
-    left: 10rem;
-    padding: 0.2rem;
-    position: absolute;
-}
-
-#ProjectsTitle a {
-    bottom: -2.125rem;
-    left: 8.5rem;
-    position: absolute;
-    visibility: hidden;
-    transition: 0.1s;
-}
-
-#ProjectsTitle::after {
-    background-color: #42414d;
-    border-radius: 0 0 1.25rem 1.25rem;
-    bottom: -1.25rem;
-    content: "";
-    height: 3.75rem;
+    content: '';
+    height: 4rem;
     left: 0;
     position: absolute;
-    width: 100%;
-    z-index: -1;
-
     transition: bottom 0.2s;
+    width: 100%;
+    z-index: -2;
 }
 
-#ProjectsTitle.ShowLink::after {
-    bottom: -3.75rem;
+
+#MyProjects #ProjectsTitle.ShowLink::after {
+    bottom: -3rem;
 }
 
-#ProjectsTitle.ShowLink a {
-    bottom: -3.125rem;
-    visibility: visible;
+#MyProjects #ProjectsTitle i {
+    background-color: #22212C;
+    border-radius: var(--sectionBorder);
+    bottom: -1rem;
+    font-size: 1.5rem;
+    left: 10rem;
+    padding: 0.25rem;
+    position: absolute;
 }
 
-#Projects {
+#MyProjects #ProjectsTitle a {
+    bottom:  0.5rem;
+    left: 8.5rem;
+    position: absolute;
+    transition: 0.2s;
+    z-index: -1;
+}
+
+#MyProjects #ProjectsTitle.ShowLink a {
+    bottom: -2.5rem;
+    z-index: 0;
+}
+
+#MyProjects #Projects {
     display: flex;
     flex-direction: column;
-    gap: var(--sectionSpacing);
+    gap: 2rem;
 }
 
-#Projects a > div {
+#MyProjects #Projects .Project1, #MyProjects #Projects .Project2 {
     background-color: var(--sectionBackground);
-    border-radius: 1.25rem;
-    padding: var(--sectionSpacing) 1.25rem 1.4rem var(--sectionSpacing) ;
+    border-radius: var(--sectionBorder);
+    box-shadow: var(--sectionBoxShadow);
+    display: block;
+    padding: var(--sectionPadding) 1.25rem 1.4rem var(--sectionPadding);
 }
 
-#Projects h3 {
-    display: flex;
-    margin-bottom: 1.375rem;
+#MyProjects #Projects h3 {
+    margin-bottom: 1.25rem;
 }
 
-#Projects i {
-    font-size: 1.5rem;
-}
-
-#Projects i.icon-folder {
+#MyProjects #Projects h3 i {
+    font-size: 1.25rem;
     margin-right: 1rem;
 }
 
-#Projects span  {
+#MyProjects #Projects p {
+    margin-bottom: 1.8rem;
+}
+
+#MyProjects #Projects .StarestBranchsAndLang {
+    display: grid;
+    grid-template-columns: 5rem 11rem 4rem;
+    position: relative;
+}
+
+#MyProjects #Projects .StarestBranchsAndLang::after {
+    background-color: #E34C26;
+    border: 2px solid #837E9F;
+    border-radius: var(--sectionBorder);
+    bottom: 0;
+    content: '';
+    height: 0.9rem;
+    position: absolute;
+    right: 3.5rem;
+    width: 0.9rem;
+}
+
+#MyProjects #Projects .StarestBranchsAndLang span {
     align-items: center;
     display: flex;
     gap: 0.5rem;
 }
 
-
-#Projects .Project1 div, #Projects .Project2 div {
-    display: grid;
-    grid-template-columns: 5.625rem 11rem 3.125rem;
-    margin-top: 3rem;
-    position: relative;
+#MyProjects #Projects .StarestBranchsAndLang i {
+    font-size: 1.25rem;
 }
 
-
-#Projects span::after {
-    background-color: #E34C26;
-    border: 2px solid #837E9F;
-    border-radius: 50%;
-    content: "";
-    height: 0.9rem;
-    position: absolute;
-    right: 60px;
-    width: 0.9rem;
-
-
-}
 
 #RecentPosts #PostsTitle {
     background-color: var(--sectionBackground);
-    border-radius: 1.25rem;
-    margin-bottom: var(--sectionSpacing);
-    padding: var(--sectionSpacing);
-}
-
-
-#RecentPosts #Post {
-    background-color: var(--sectionBackground);
-    border-radius: 1.25rem;
-    padding: var(--sectionSpacing);
+    border-radius: var(--sectionBorder);
+    box-shadow: var(--sectionBoxShadow);
+    margin-bottom: 2rem;
+    padding: var(--sectionPadding);
     text-align: center;
 }
 
-#RecentPosts #Post img {
+#RecentPosts #Post {
+    background-color: var(--sectionBackground);
+    border-radius: var(--sectionBorder);
+    box-shadow: var(--sectionBoxShadow);
+    padding: var(--sectionPadding);
+    text-align: center;
+}
+
+#RecentPosts #Post img{
     margin-bottom: 1.25rem;
 }
 
 #RecentPosts #Post h3 {
-    margin-bottom: 0.25rem;
-}
-
-#RecentPosts #Post > span {
-    display: inline-block;
-    margin-bottom: 1.75rem;
+    margin-bottom: 0.75rem;
 }
 
 #RecentPosts #Post p {
-    margin-bottom: 0.625rem;
+    margin-top: 1.6rem;
 }
 
 #RecentPosts #Post p span {
-    line-height: 2rem;
+    line-height: 1.5rem;
     margin-right: 1.5rem;
 }
 
 @media(min-width: 900px) {
 
     body {
-        padding: 2.5rem 2.5rem;
+        padding: 0 2.5rem 3.5rem;
     }
 
     main {
         position: relative;
     }
 
-    #Profile,#ProfessionalLinks,#Technologies,#Education {
-        box-shadow: var(--sectionShadow);
+    #Profile, #ProfessionalLinks, #Technologies, #Education {
         width: var(--sectionDesktopWidth);
     }
 
-    #Profile:hover img {
-        animation: Clipping 1s forwards;
+    #Profile.MouseEnter #Avatar, #Profile.MouseEnter::after {
+        animation: Clipping 0.5s forwards;
+    }
+
+    #Profile.MouseLeave #Avatar , #Profile.MouseLeave::after {
+        animation: Unclipping 0.5s reverse forwards;
     }
 
     #Profile::after {
-        top: 27px;
-        left: 100px;
+        left: 6.225rem;
+        top: 1.75rem;
     }
 
-    #Profile:hover::after {
-        animation: Clipping 1s forwards;
-    }
-
-    @keyframes Clipping {
-
-        0% {
-            clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 0 );
-        }
-
-        100% {
-            clip-path: polygon(50% 0, 95% 27%, 95% 73%, 50% 100%, 5% 73%, 5% 27%);
-
-        }
-    }
-
-    #MyProjects, #RecentPosts, #Post {
-        width: calc(var(--sectionDesktopWidth) + 32rem);
-    }
 
     #MyProjects {
+        margin: 0;
         position: absolute;
         right: 0;
         top: 0;
+        width: 52rem;
     }
 
     #MyProjects #ProjectsTitle {
         align-items: center;
-        border-radius: 1.25rem;
-        box-shadow: var(--sectionShadow);
+        border-radius: var(--sectionBorder);
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1.4rem;
+        margin-bottom: 2rem;
+        text-align: left;
     }
 
-    #MyProjects #ProjectsTitle i{
+    #MyProjects #ProjectsTitle i, #MyProjects #ProjectsTitle::after {
         display: none;
-    }
-
-    #MyProjects #ProjectsTitle::after {
-          display: none;
     }
 
     #MyProjects #ProjectsTitle a {
         position: static;
-        visibility: visible;
-
+        z-index: 0;
     }
 
-    #Projects {
+    #MyProjects #Projects { 
         flex-direction: row;
     }
 
-    
-    #MyProjects #Projects .Project1 {
-        box-shadow: var(--sectionShadow);
-        width: fit-content;
-    }
 
     #MyProjects #Projects .Project1:hover {
-        animation: ToFloat 1s infinite linear;
-    }
-
-    #MyProjects #Projects .Project1:active {
-        animation: ToPress 1s forwards;
-
-    }
-
-    
-    #MyProjects #Projects .Project2 {
-        box-shadow: var(--sectionShadow);
-        width: 28rem;
+        animation: Test 1s linear infinite;
     }
 
     #MyProjects #Projects .Project2:hover {
-        animation: ToFloat 1s infinite linear;
+        animation: Test 1s linear infinite;
     }
 
-    #MyProjects #Projects .Project2:active {
-        animation: ToPress 1s forwards;
+    #MyProjects #Projects .Project1 .StarestBranchsAndLang {
+        grid-template-columns: 5rem 12.5rem 0.5rem;
     }
 
-    #MyProjects #Projects .Project1 span::after {
-        right: 75px;
-    }
-
-    #MyProjects #Projects .Project2 span::after {
-        right: 70px;
-
-    }
-
-    #MyProjects #Projects .Project1 div {
-        grid-template-columns: 5.625rem 11rem 3.125rem ; 
-    }
-
-    #MyProjects #Projects .Project2 div {
-        grid-template-columns: 5.625rem 16rem 3.125rem ; 
+    #MyProjects #Projects .Project2 .StarestBranchsAndLang {
+        grid-template-columns: 5rem 15rem 0.5rem;
     }
 
     #RecentPosts {
         position: absolute;
         right: 0;
-        top: 21rem;
+        top: 20rem ;
+        width: 52rem;
     }
 
     #RecentPosts #PostsTitle {
-        box-shadow: var(--sectionShadow);
+        text-align: left;
     }
 
     #RecentPosts #Post {
-        box-shadow: var(--sectionShadow);
-        display: grid;
-        grid-template-columns: 8rem 40rem;
         column-gap: 1.25rem;
+        display: grid;
         grid-template-areas: "img h3"
                              "img span"
                              "img p";
- 
+        grid-template-columns: 8rem 40rem;
+        grid-template-rows: 1.8rem 1.6rem 4.3rem;
+        
         text-align: left;
-
-
-                             
     }
 
-    #RecentPosts #Post:hover {
-        animation: ToFloat 1s infinite linear ;
-    }
 
-    #RecentPosts #Post:active {
-        animation: ToPress 1s forwards;
-    }
-
-    
     #RecentPosts #Post img {
         grid-area: img;
     }
@@ -451,42 +394,68 @@ img {
     #RecentPosts #Post h3 {
         grid-area: h3;
     }
-    
-    #RecentPosts #Post > span {
+
+    #RecentPosts #Post span {
         grid-area: span;
     }
 
     #RecentPosts #Post p {
         grid-area: p;
+        line-height: 1.8rem;
     }
 
+    @keyframes Test {
+        25% {
+            transform: translateY(-5px) ;
 
-    @keyframes ToFloat {
-    25% {
-        transform: translateY(5px);
-    }
-
-    50% {
-        transform: translateY(-5px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-    }
-
-    @keyframes ToPress {
-        50% {
-            transform: scale(95%);
         }
 
+        50% {
+            transform: translateY(0);
+        }
+
+        75% {
+            transform: translateY(5px) ;
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes Test1 {
         100% {
             transform: scale(95%);
         }
     }
 
+
+    @keyframes Clipping {
+
+        25% {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+        }
+
+        100% {
+            clip-path: polygon(50% 0%, 95% 27%, 95% 75%, 50% 100%, 5% 75%, 5% 27%);
+        }
+    }
+
+    @keyframes Unclipping {
+
+        25% {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+        }
+
+        100% {
+            clip-path: polygon(50% 0%, 95% 27%, 95% 75%, 50% 100%, 5% 75%, 5% 27%);
+        }
+    }
+
+    @keyframes Test2 {
+        100% {
+            transform: scale(95%);
+        }        
+    }
 }
-
-
-
 

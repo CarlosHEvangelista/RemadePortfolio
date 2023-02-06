@@ -1,4 +1,4 @@
-IconForToggleSystem.addEventListener('click', function () {
+ToggleButton.addEventListener('click', function () {
   if (ProjectsTitle.classList == 'ShowLink') {
     ProjectsTitle.classList.remove('ShowLink')
   } else {
